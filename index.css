@@ -118,7 +118,10 @@ a:hover::after {
 .hero-strip {
     height: 80vh;
     width: 100%;
-    background-color: #444;
+    background-image: url(https://images.unsplash.com/photo-1457732815361-daa98277e9c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,11 +149,11 @@ a:hover::after {
     display: flex;
     justify-content: space-between;
     color: white;
-    background-color: black;
+    background-color: #343434;
     box-shadow: 0px 3px 6px 1px grey;
 }
 .card i {
-    color: #B3C8BB;
+    color: rgb(156, 199, 173);
     transform: scale(1.2) translateY(10px);
 }
 .card p {
