@@ -2,6 +2,7 @@
 const hamburger = document.querySelector('.hamburger');
 const navMobile = document.querySelector('.nav-mobile');
 const mobileLinks = document.querySelectorAll('.mobileLink');
+const cards = document.querySelectorAll('.card');
 
 // HELPER FUNCS
 const expandMenu = () => {
@@ -25,4 +26,11 @@ const hamburgerClick = (x) => {
 hamburger.addEventListener('click', function() {
     expandMenu();
     setTimeout(showMobileMenu, 250);
+});
+
+// Expand cards
+cards.forEach((item) => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('move');
+    });
 });
