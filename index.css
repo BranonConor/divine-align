@@ -1,7 +1,7 @@
 /* -- GLOBAL STYLES -- */
 html {
 	width: 100%;
-    height: 100%;
+    min-height: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
@@ -25,25 +25,25 @@ a::after {
     content: '';
     width: 0;
     height: 2px;
-    background: #B3C8BB;
+    background:  rgb(156, 199, 173);
     transition: width .6s;
     position: absolute;
-    left: -50%;
-    top: 90%;
+    left: 0%;
+    top: 150%;
     opacity: 0;
     transition: 0.5s ease all;
 }
 a:hover {
-    color: #B3C8BB;
+    color:  rgb(156, 199, 173);
 }
 a:hover::after {
     width: 100%;
-    transform: translateX(50%);
     transition: 0.25s ease all;
     opacity: 1;
+    top: 90%;
 }
 
-/* --- NAVIGATION --- */
+/* ----------------- NAVIGATION ------------------ */
 .nav {
     color: black;
     width: 100%;
@@ -71,19 +71,21 @@ a:hover::after {
     align-items: center;
     height: 80px;
     width: 100vw;
+    font-weight: bold;
 }
 .navLink {
     padding: 0 20px;
     height: 50%;
     display: flex;
     align-items: center;
+    font-weight: bold;
     transition: 0.2s ease all;
 }
 .hamburger {
     display: none;
 }
 .nav-mobile {
-    width: 100vw;
+    width: 100%;
     height: 0px;
     transition: 0.4s ease-in;
 }
@@ -107,14 +109,18 @@ a:hover::after {
     color: #B3C8BB;
     transition: 0.1s;
 }
+.mobileLink:hover::after {
+    width: 50%;
+    left: 50%;
+    transition: 0.25s ease all;
+    opacity: 1;
+    top: 90%;
+}
 .social {
     display: flex;
     padding-right: 10px;
 }
-
-
-
-/* --- HERO STRIP --- */
+/* ------------- HERO STRIP -------------- */
 .hero-strip {
     height: 80vh;
     width: 100%;
@@ -132,13 +138,21 @@ a:hover::after {
 /* --- MODALITIES --- */
 .modalities {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+}
+.modalities h2 {
+    padding: 20px 10px 10px 10px;
+    letter-spacing: 3px;
+    font-weight: bold;
 }
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 900px;
+    padding-bottom: 20px;
 }
 .card {
     border-radius: 10px;
@@ -151,15 +165,101 @@ a:hover::after {
     color: white;
     background-color: #343434;
     box-shadow: 0px 3px 6px 1px grey;
+    transition: 0.4s ease all;
+    position: relative;
+    top: 0;
+}
+.card::after {
+    content: '';
+    border-radius: 10px;
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    box-shadow: 0px 3px 6px 1px grey;
+    background-color: rgb(156, 199, 173);
+    transition: 0.4s ease all;
+    z-index: -1;
+}
+.card:hover::after {
+    height: 200px;
+    z-index: -3;
+}
+.card:hover i {
+    transform: translatey(60px) scale(1.5) rotate(15deg);
+}
+.card:hover p {
+    transform: translateX(20px);
 }
 .card i {
     color: rgb(156, 199, 173);
     transform: scale(1.2) translateY(10px);
+    transition: 0.4s ease all;
 }
 .card p {
     font-size: 1.1rem;
     position: relative;
     top: 20px;
+    transition: 0.4s ease all;
+}
+
+/* ---------- ATHLETE STRIP ------------ */
+.athlete-strip {
+    background-image: url(athlete-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 90vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+.athlete-strip h2 {
+    width: 50%;
+    line-height: 75px; 
+    font-weight: bold;
+}
+.athlete-strip hr {
+    width: 20%;
+}
+.athlete-strip button {
+    width: 150px;
+    height: 60px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: rgb(156, 199, 173);
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.4s ease all;
+}
+.athlete-strip button:hover {
+    background:none;
+    font-size: 1.1rem;
+    border: 1px solid white;
+}
+.overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    height: 100%;
+    background: rgba(0,0,0, 0.35);
+}
+
+@media only screen and (max-width: 1100px) {
+    .athlete-strip h2 {
+        width: 60%;
+        line-height: 60px; 
+        font-weight: bold;
+    }
 }
 
 @media only screen and (max-width: 980px) {
@@ -168,8 +268,26 @@ a:hover::after {
     }
 }
 
+@media only screen and (max-width: 800px) {
+    .athlete-strip h2 {
+        width: 70%;
+        line-height: 50px; 
+        font-weight: bold;
+    }
+    .athlete-strip {
+        background-image: url(athlete-mobile.png);
+    }
+}
+
 @media only screen and (max-width: 640px) {
     /* Mobile Nav */
+        .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+    }
     .navbar {
         display: none;
         overflow: hidden;
@@ -189,7 +307,7 @@ a:hover::after {
         flex-direction: column;
         justify-content: center;
         position: relative;
-        left: 50px;
+        left: 0%;
         top: -100px;
         opacity: 0;
     }
@@ -198,8 +316,8 @@ a:hover::after {
         -moz-transition: 0.6s; /* Fx 5+ */
         -o-transition: 0.6s; /* Opera 12+ */
         transition: 0.6s; /* IE 10+, Fx 29+, */
-        height: 25vh;
-        transform: translateX(-40px) translateY(100px);
+        height: 20vh;
+        transform: translateX(-50%) translateY(50%);
         opacity: 1;
     }
     .mobileLink {
@@ -210,36 +328,16 @@ a:hover::after {
         z-index: 5;
         max-width: 100vw;
         transition: 0.3s;
-    }
-    .mobileLink::after {
-        content: '';
-        width: 0;
-        height: 2px;
-        background: orange;
-        transition: width .6s;
-        position: absolute;
-        left: 25%;
-        top: 90%;
-        opacity: 0;
-        transition: 0.5s ease all;
-    }
-    .mobileLink:hover {
-        color: orange;
-    }
-    .mobileLink:hover::after {
         width: 50%;
-        transform: translateX(50%);
-        transition: 0.25s ease all;
-        opacity: 1;
     }
     .hamburger {
         display: inline-block;
         cursor: pointer;
         width: 20px;
         height: auto;
-        padding: 10px 40px 10px 10px;
+        padding: 10px 10px 10px 10px;
         position: relative;
-        left: 0%;
+        left: -5%;
         transition: 0.4s ease all;
     } 
     .bar1, .bar3 {
@@ -256,9 +354,7 @@ a:hover::after {
         margin: 6px 0;
         transition: 0.5s;
     }
-    .change {
-        left: 5%;
-    }
+
     .change .bar1 {
         -webkit-transform: rotate(-45deg);
         transform: translateY(10px) rotate(-228deg);
@@ -272,5 +368,18 @@ a:hover::after {
         -webkit-transform: rotate(45deg);
         transform: translateY(-10px) rotate(48deg);
     /*  translate(-9px, -12px) */
+    }
+    .athlete-strip h2 {
+        width: 80%;
+        line-height: 40px; 
+        font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .athlete-strip h2 {
+        width: 85%;
+        line-height: 30px; 
+        font-weight: bold;
     }
 }
