@@ -199,10 +199,10 @@ a:hover::after {
     transition: width 285ms cubic-bezier(0.4, 0.0, 0.2, 1), height 325ms cubic-bezier(0.4, 0.0, 0.2, 1) 50ms;
 }
 .card-preview:hover i {
-    transform: translateX(-50px);
+    transform: translateX(-30px);
 }
 .card-preview:hover p {
-    transform: translateX(50px);
+    transform: translateX(30px);
 }
 .card i {
     font-size: 2rem;
