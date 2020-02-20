@@ -55,22 +55,25 @@ a:hover::after {
     background: white;
     border-bottom: 2px solid black;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+.desktop-wrapper {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 .brand {
     font-family: 'Sacramento', cursive;
     padding-left: 10px;
 }
-.display-none {
-    display: none;
-}
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80px;
-    width: 100vw;
+    width: 80%;
     font-weight: bold;
 }
 .navLink {
@@ -85,19 +88,30 @@ a:hover::after {
     display: none;
 }
 .nav-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
     width: 100%;
     height: 0px;
     transition: 0.4s ease-in;
 }
 .revealNavMobile {
-    -webkit-transition: 0.5s; /* Safari 4+ */
-    -moz-transition: 0.5s; /* Fx 5+ */
-    -o-transition: 0.5s; /* Opera 12+ */
+    -webkit-transition: 0.6s; /* Safari 4+ */
+    -moz-transition: 0.6s; /* Fx 5+ */
+    -o-transition: 0.6s; /* Opera 12+ */
     transition: 0.5s; /* IE 10+, Fx 29+, */
-    height: 30vh;
+    height: 20vh;
+    opacity: 1;
+}
+.revealNavMobile .mobileLink {
+    line-height: 30px;
 }
 .mobileLink {
-    text-align: right;
+    transition: 0.6 ease all;
+    line-height: 5px;
+    text-align: center;
     padding: 5px;
     letter-spacing: 3px;
     color: black;
@@ -110,11 +124,7 @@ a:hover::after {
     transition: 0.1s;
 }
 .mobileLink:hover::after {
-    width: 50%;
-    left: 50%;
-    transition: 0.25s ease all;
-    opacity: 1;
-    top: 90%;
+    display: none;
 }
 .social {
     display: flex;
@@ -295,54 +305,11 @@ a:hover::after {
 
 @media only screen and (max-width: 640px) {
     /* Mobile Nav */
-        .nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        overflow: hidden;
-    }
     .navbar {
-        display: none;
-        overflow: hidden;
+        visibility: hidden;
     }
     .social {
         display: none;
-    }
-    .display-none {
-        display: block;
-        opacity: 0;
-    }
-    .nav-mobile {
-        width: 100vw;
-        height: 0px;
-        transition: 0.6s ease-in;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-        left: 0%;
-        top: -100px;
-        opacity: 0;
-    }
-    .revealNavMobile {
-        -webkit-transition: 0.6s; /* Safari 4+ */
-        -moz-transition: 0.6s; /* Fx 5+ */
-        -o-transition: 0.6s; /* Opera 12+ */
-        transition: 0.6s; /* IE 10+, Fx 29+, */
-        height: 20vh;
-        transform: translateX(-50%) translateY(50%);
-        opacity: 1;
-    }
-    .mobileLink {
-        text-align: right;
-        padding: 5px;
-        letter-spacing: 3px;
-        color: black;
-        z-index: 5;
-        max-width: 100vw;
-        transition: 0.3s;
-        width: 50%;
     }
     .hamburger {
         display: inline-block;
