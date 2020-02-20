@@ -60,11 +60,13 @@ a:hover::after {
     align-items: center;
 }
 .desktop-wrapper {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .brand {
+    width: 150px;
     font-family: 'Sacramento', cursive;
     padding-left: 10px;
 }
@@ -306,7 +308,7 @@ a:hover::after {
 @media only screen and (max-width: 640px) {
     /* Mobile Nav */
     .navbar {
-        visibility: hidden;
+        display: none;
     }
     .social {
         display: none;
