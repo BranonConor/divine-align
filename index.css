@@ -318,7 +318,7 @@ a:hover::after {
         cursor: pointer;
         width: 20px;
         height: auto;
-        padding: 10px 10px 10px 10px;
+        padding: 10px 20px 10px 10px;
         position: relative;
         left: -5%;
         transition: 0.4s ease all;
