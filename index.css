@@ -287,6 +287,9 @@ a:hover::after {
     justify-content: flex-start;
     padding: 40px 0;
 }
+.testimonials h2 {
+    padding-bottom: 25px;
+}
 .quote-wrapper {
     display: flex;
     flex-direction: row;
