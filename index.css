@@ -235,7 +235,6 @@ a:hover::after {
     background-image: url(athlete-desktop.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     height: 90vh;
     color: white;
     display: flex;
@@ -281,12 +280,12 @@ a:hover::after {
 /* ---------- TESTIMONIALS ------------ */
 .testimonials {
     width: 100%;
-    height: 400px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: #B3C8BB;
+    justify-content: flex-start;
+    padding: 40px 0;
 }
 .quote-wrapper {
     display: flex;
@@ -297,9 +296,31 @@ a:hover::after {
 }
 .quote {
     width: 300px;
+    font-weight: bold;
+    transition: 0.2s ease all;
 }
-
-
+.quote:hover {
+    color: white;
+    transform: scale(1.2);
+}
+/* ---------- PHONE ------------ */
+.phone {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #B3C8BB;
+    padding: 40px 0;
+}
+.phone-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
 
 
 
@@ -385,8 +406,32 @@ a:hover::after {
     }
     .athlete-strip h2 {
         width: 80%;
-        line-height: 40px; 
+        line-height: 30px; 
         font-weight: bold;
+        font-size: 1rem;
+    }
+    /* Testimonials */
+    .quote {
+        text-align: center;
+        width: 100%;
+        font-weight: bolder;
+    }
+    .quote p {
+        padding: 0 10px;
+    }
+    .quote:hover {
+        color: white;
+        transform: scale(1.05);
+    }
+    .one {
+        background-color: #B3C8BB;
+
+    }
+    .two {
+        background-color: #93B19F;
+    }
+    .three {
+        background-color: #7B9A87;
     }
 }
 
@@ -398,9 +443,5 @@ a:hover::after {
     }
     .wrapper .card {
         width: 300px;
-    }
-    /* Testimonials */
-    .quote {
-        width: 90%;
     }
 }
