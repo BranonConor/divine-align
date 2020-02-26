@@ -473,4 +473,7 @@ a:hover::after {
     .wrapper .card {
         width: 300px;
     }
+    .footer a {
+        color: #B3C8BB;
+    }
 }
