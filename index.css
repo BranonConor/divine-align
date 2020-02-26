@@ -136,7 +136,7 @@ a:hover::after {
 .hero-strip {
     height: 80vh;
     width: 100%;
-    background-image: url(https://images.unsplash.com/photo-1457732815361-daa98277e9c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+    background-image: url(https://images.unsplash.com/photo-1512386233331-f023884a92e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1372&q=80);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -144,7 +144,7 @@ a:hover::after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: black;
 }
 
 /* --- MODALITIES --- */
