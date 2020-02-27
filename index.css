@@ -428,11 +428,11 @@ a:hover::after {
     .change .bar3 {
         -webkit-transform: rotate(45deg);
         transform: translateY(-10px) rotate(48deg);
-    /*  translate(-9px, -12px) */
     }
     /* Hero Strip */
     .hero-strip {
         background-attachment: scroll;
+        color: white;
     }
     /* Athlete Strip */
     .athlete-strip h2 {
