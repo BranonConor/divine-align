@@ -430,6 +430,11 @@ a:hover::after {
         transform: translateY(-10px) rotate(48deg);
     /*  translate(-9px, -12px) */
     }
+    /* Hero Strip */
+    .hero-strip {
+        background-attachment: scroll;
+    }
+    /* Athlete Strip */
     .athlete-strip h2 {
         width: 80%;
         line-height: 30px; 
