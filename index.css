@@ -144,7 +144,36 @@ a:hover::after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: white;
+    font-weight: bolder;
+}
+.hero-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #B3C8BB;
+    border-radius: 10px;
+    width: 320px;
+    height: 250px;
+}
+.hero-overlay i {
+    transition: 0.4s ease all;
+}
+.hero-overlay hr {
+    border-color: white;
+    border-style: double;
+    color: white;
+    width: 50px;
+}
+.hero-overlay:hover i {
+    transform: translateY(7px) scale(1.2);
+}
+.hero-overlay a {
+    color: white;
+}
+.hero-overlay a:hover::after {
+    display: none;
 }
 
 /* --- MODALITIES --- */
