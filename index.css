@@ -1,3 +1,8 @@
+/* ------ VARIABLES ------ */
+:root {
+    --main-accent: rgb(156, 199, 173);
+}
+
 /* -- GLOBAL STYLES -- */
 html {
 	width: 100%;
@@ -25,7 +30,7 @@ a::after {
     content: '';
     width: 0;
     height: 2px;
-    background:  rgb(156, 199, 173);
+    background: var(--main-accent);
     transition: width .6s;
     position: absolute;
     left: 0%;
@@ -34,7 +39,7 @@ a::after {
     transition: 0.5s ease all;
 }
 a:hover {
-    color:  rgb(156, 199, 173);
+    color: var(--main-accent);
 }
 a:hover::after {
     width: 100%;
@@ -42,7 +47,6 @@ a:hover::after {
     opacity: 1;
     top: 90%;
 }
-
 /* ----------------- NAVIGATION ------------------ */
 .nav {
     color: black;
@@ -353,7 +357,100 @@ a:hover::after {
     align-items: center;
     width: 100%;
 }
-
+/* -------- CONTACT FORM --------- */
+.contact-strip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: rgb(186, 201, 197);
+    padding: 50px 0;
+}
+.contact-strip p {
+    padding: 0;
+    margin: 0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    color: white;
+}
+fieldset {
+    border-radius: 15px;
+    background: #343434;
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    box-shadow: 0px 3px 6px 1px grey;
+}
+input {
+    background: #eee;
+}
+input, label {
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+textarea {
+    padding: 10px;
+    height: 100px;
+    background: #eee;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+.form-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.name, .email {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.form-bottom {
+    
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.contact-button {
+    -webkit-appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+    margin-top: 20px;
+    background: #343434;
+    color:white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: .3s ease all;
+    border-radius: 7px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: 0px 3px 6px 1px grey;
+    font-size: 0.8rem;
+}
+.contact-button:hover {
+    background: #989898;
+    transform: translateY(-3px);
+    box-shadow: none;
+}
 /* ----------- FOOTER ------------- */
 .footer {
     display: flex;
@@ -497,6 +594,23 @@ a:hover::after {
         background-color: #7B9A87;
         color: white;
     }
+    /* CONTACT */
+    fieldset {
+        width: 350px;
+    }
+    .form-top {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+    input, label {
+        width: 94%;
+    }
+    .name, .email {
+        margin: 0;
+    }
+    textarea {
+        height: 80px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -510,5 +624,19 @@ a:hover::after {
     }
     .footer a {
         color: #B3C8BB;
+    }
+    .testimonials {
+        padding: 50px 0 0 0;
+    }
+    /* CONTACT */
+    fieldset {
+        width: 270px;
+    }
+    .contact-strip p {
+        padding: 0 30px;
+        text-align: center;
+    }
+    textarea {
+        width: 260px;
     }
 }
