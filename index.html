@@ -10,7 +10,7 @@
     </head>
     <body>
         <!-- NAVIGATION -->
-        <div class="nav">
+        <div class="nav"> 
             <div class="desktop-wrapper">
                 <div class="brand">
                     <h2>Erika Winston</h2>
@@ -169,11 +169,32 @@
                 </div>
             </div>
         </div>
-        <!---------- PHONE STRIP ---------->
-        <div class="phone-strip">
+        <!---------- CONTACT FORM ---------->
+        <div class="contact-strip">
+            <i class="far fa-envelope fa-2x"></i>
+            <h2>CONTACT ME</h2>
+            <p>I'd love to hear more about you and how I may help!</p>
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/YOUR_EMAIL_HERE" method="post">
+                <fieldset id="fs-frm-inputs">
+                    <div class="form-top">
+                        <div class="name">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" name="name" id="full-name" placeholder="First and Last" required>
+                        </div>
+                        <div class="email">
+                            <label for="email-address">Email Address</label>
+                        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <label for="message">Message</label>
+                        <textarea rows="5" name="message" id="message" placeholder="Leave me a message!" required></textarea>
+                        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                    </div>
+                </fieldset>
+                <input type="submit" value="Submit" class='contact-button'>
+            </form>
         </div>
-
-
         <!---------- FOOTER ---------->
         <div class="footer">
             <div class="footer-social">
