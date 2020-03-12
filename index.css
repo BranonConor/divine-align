@@ -381,12 +381,19 @@ form {
     margin: 20px 0;
     color: white;
 }
-fieldset {
+#fs-frm-inputs {
+    -webkit-appearance: none;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-block-start: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    padding-block-end: 0;
     border-radius: 15px;
     background: #343434;
     width: 500px;
     height: 300px;
-    border: 1px solid black;
+    border: none;
     box-shadow: 0px 3px 6px 1px grey;
 }
 input {
@@ -416,9 +423,11 @@ textarea {
     display: flex;
     flex-direction: column;
     margin: 10px;
+    position: relative;
+    left: 9px;
+    width: 95%;
 }
 .form-bottom {
-    
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -599,7 +608,8 @@ textarea {
         color: white;
     }
     /* CONTACT */
-    fieldset {
+    #fs-frm-inputs {
+        padding: 20px 0 30px 0;
         width: 350px;
     }
     .form-top {
@@ -641,7 +651,8 @@ textarea {
         text-align: center;
     }
     #fs-frm-inputs {
-        padding: 20px 10px 30px 10px;
+        width: 300px;
+        margin: 0 0 0 0;
     }
     textarea {
         width: 320px;
@@ -658,10 +669,5 @@ textarea {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-    }
-    #fs-frm-inputs {
-        width: 290px;
-        padding: 10px;
-        margin: 10px 0 10px 0;
     }
 }
