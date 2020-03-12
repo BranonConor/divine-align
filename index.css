@@ -641,10 +641,10 @@ textarea {
         text-align: center;
     }
     #fs-frm-inputs {
-        padding: 20px 10px 20px 10px;
+        padding: 20px 10px 30px 10px;
     }
     textarea {
-        width: 95%;
+        width: 320px;
     }
 }
 
