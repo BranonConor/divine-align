@@ -57,11 +57,13 @@ a:hover::after {
     z-index: 2;
     top: 0;
     background: white;
-    border-bottom: 2px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    -webkit-box-shadow: 0px 10px 24px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 24px -12px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 24px -12px rgba(0,0,0,0.75);
 }
 .desktop-wrapper {
     width: 100%;
@@ -534,6 +536,7 @@ textarea {
         background-color: black;
         margin: 6px 0;
         transition: 0.6s;
+        border-radius: 100px;
     }
     .bar2 {
         width: 30px;
@@ -541,6 +544,7 @@ textarea {
         background-color: black;
         margin: 6px 0;
         transition: 0.5s;
+        border-radius: 100px;
     }
 
     .change .bar1 {
@@ -632,11 +636,32 @@ textarea {
     fieldset {
         width: 270px;
     }
+    .contact-strip {
+        padding: 50px 0 10px 0;
+    }
     .contact-strip p {
         padding: 0 30px;
         text-align: center;
     }
     textarea {
         width: 260px;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .athlete-strip {
+        height: 98vh;
+    }
+    .wrapper .card {
+        width: 290px;
+        margin: 10px 0 10px 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #fs-frm-inputs {
+        width: 290px;
+        padding: 10px;
+        margin: 10px 0 10px 0;
     }
 }
