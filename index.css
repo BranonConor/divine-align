@@ -633,9 +633,6 @@ textarea {
         padding: 50px 0 0 0;
     }
     /* CONTACT */
-    fieldset {
-        width: 270px;
-    }
     .contact-strip {
         padding: 50px 0 10px 0;
     }
@@ -643,8 +640,11 @@ textarea {
         padding: 0 30px;
         text-align: center;
     }
+    #fs-frm-inputs {
+        padding: 20px 10px 30px 10px;
+    }
     textarea {
-        width: 260px;
+        width: 320px;
     }
 }
 
