@@ -569,7 +569,7 @@ textarea {
     }
     /*  translate(3px, -5px) */
     .change .bar2 {
-        transform: rotate(125deg) translateY(-10px) translateX(30px);
+        transform: translateY(5px);
         opacity: 0;
     }
     .change .bar3 {
